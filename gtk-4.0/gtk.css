@@ -1,0 +1,108 @@
+window {
+  border-width: 0px;
+}
+
+windowcontrols>button {
+  min-height: 16px;
+  min-width: 16px;
+  padding: 8px 0;
+  margin-left: 3px;
+  margin-right: 3px;
+  box-shadow: none;
+}
+
+windowcontrols>button.minimize,
+windowcontrols>button.maximize,
+windowcontrols>button.close {
+  color: transparent;
+  background: none;
+}
+
+windowcontrols>button.minimize:hover,
+windowcontrols>button.minimize:active,
+windowcontrols>button.maximize:hover,
+windowcontrols>button.maximize:active,
+windowcontrols>button.close:hover,
+windowcontrols>button.close:active {
+  box-shadow: none;
+}
+
+windowcontrols>button.minimize:active>image,
+windowcontrols>button.maximize:active>image,
+windowcontrols>button.close:active>image {
+  background-color: alpha(black, 0.12);
+}
+
+windowcontrols>button.minimize:hover,
+windowcontrols>button.minimize:active,
+windowcontrols>button.maximize:hover,
+windowcontrols>button.maximize:active,
+windowcontrols>button.close:hover,
+windowcontrols>button.close:active {
+  color: white;
+}
+
+windowcontrols>button.minimize:backdrop>image,
+windowcontrols>button.maximize:backdrop>image,
+windowcontrols>button.close:backdrop>image {
+  background-color: alpha(@headerbar_fg_color, 0.3);
+}
+
+windowcontrols>button.minimize:backdrop:hover,
+windowcontrols>button.minimize:backdrop:active,
+windowcontrols>button.maximize:backdrop:hover,
+windowcontrols>button.maximize:backdrop:active,
+windowcontrols>button.close:backdrop:hover,
+windowcontrols>button.close:backdrop:active {
+  color: alpha(@headerbar_fg_color, 0.45);
+}
+
+windowcontrols>button.minimize>image {
+  background-color: #fdbe04;
+}
+
+windowcontrols>button.minimize:active>image {
+  background-color: mix(@headerbar_fg_color, #fdbe04, 0.75);
+}
+
+windowcontrols>button.maximize>image {
+  background-color: #38c76a;
+}
+
+windowcontrols>button.maximize:active>image {
+  background-color: mix(@headerbar_fg_color, #38c76a, 0.75);
+}
+
+windowcontrols>button.close>image {
+  background-color: #fd5f51;
+}
+
+windowcontrols>button.close:active>image {
+  background-color: mix(@headerbar_fg_color, #fd5f51, 0.75);
+}
+
+windowcontrols {
+  border-spacing: 6px;
+}
+
+windowcontrols:not(.empty).start:dir(ltr),
+windowcontrols:not(.empty).end:dir(rtl) {
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+windowcontrols:not(.empty).start:dir(rtl),
+windowcontrols:not(.empty).end:dir(ltr) {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+windowcontrols>button>image {
+  padding: 0;
+  border-radius: 100%;
+  transition: background 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+windowcontrols>.icon {
+  margin: 9px;
+}
