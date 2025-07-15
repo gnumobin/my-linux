@@ -12,5 +12,11 @@
 # pacman -Syu
 
 
+
 ################### Neofetch ###################
 cp -r ./neofetch/* ~/.config/neofetch/
+
+
+
+################### GTK-4 ###################
+cp -r ./gtk-4.0/* ~/.config/gtk-4.0/
