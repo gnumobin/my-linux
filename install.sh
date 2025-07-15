@@ -1,6 +1,12 @@
+################### Variables ###################
 packages=(
-    ttf-dejavu ttf-jetbrains-mono 
+    ttf-dejavu ttf-jetbrains-mono ttf-nerd-fonts-symbols
 )
+
+
+################### Dependencies ###################
+sudo pacman -S --noconfirm --needed "${packages[@]}"
+
 
 ################### Neofetch ###################
 cp -r ./neofetch ~/.config/
@@ -26,6 +32,6 @@ gsettings set org.gnome.desktop.interface document-font-name "SF Pro Text 11"
 
 ################### Fonts ################### 
 mkdir -p ~/.local/share/themes
-cp -r ./themes/colloid ~/.local/share/themes
+cp -r ./theme/colloid ~/.local/share/themes
 # set themes
 gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Purple-Dark"
