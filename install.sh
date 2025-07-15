@@ -1,22 +1,31 @@
-################### Adding Chaotic AUR ###################
-
-# # Getting Chaotic Aur key list
-# pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-# pacman-key --lsign-key 3 056513887B78AEB
-# # Installing Chaotic AUR on computer
-# pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' --noconfirm --needed
-# pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst' --noconfirm --needed
-# # Adding MirrorList to pacman.conf file 
-# cp ./data/pacman.txt /etc/pacman.conf
-# # update pacman
-# pacman -Syu
-
-
+packages=(
+    ttf-dejavu ttf-jetbrains-mono 
+)
 
 ################### Neofetch ###################
-cp -r ./neofetch/* ~/.config/neofetch/
-
+cp -r ./neofetch ~/.config/
 
 
 ################### GTK-4 ###################
-cp -r ./gtk-4.0/* ~/.config/gtk-4.0/
+cp -r ./gtk-4.0 ~/.config/
+
+
+################### Extensions ###################
+cp -r ./extensions ~/.local/share/gnome-shell
+# enable 
+gnome-extensions enable appmenu-is-back@fthx
+gnome-extensions enable clipboard-indicator@tudmotu.com
+
+
+################### Fonts ################### 
+cp -r ./fonts ~/.local/share/
+# set fonts
+gsettings set org.gnome.desktop.interface font-name "SF Pro Text 11"
+gsettings set org.gnome.desktop.interface document-font-name "SF Pro Text 11"
+
+
+################### Fonts ################### 
+mkdir -p ~/.local/share/themes
+cp -r ./themes/colloid ~/.local/share/themes
+# set themes
+gsettings set org.gnome.desktop.interface gtk-theme "Colloid-Purple-Dark"
